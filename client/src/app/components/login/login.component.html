@@ -1,0 +1,58 @@
+<div class="row">
+    
+    <nav class="col-md-12 navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand">Consultoria para el nicio de cursos</a>
+        <form class="form-inline">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="callregister()">Registrarme</button>
+        </form>
+      </nav>
+      
+    </div>
+    <div class="row"><br /><br /></div>
+    <div class="col-md-5 offset-md-5 col-sm-12">
+        <h1>
+            Iniciar sesion 
+        </h1>
+    </div>
+    <div class="row"><br /><br /></div>
+    <div class="row">
+        <div class="col-md-5 offset-md-5 col-sm-12">
+          <form autocomplete="off">
+            <div class="form-row">
+            <div class="form-group col-md-6 col-sm-12">
+                <label for="inputNombre">Carne</label>
+                <input  name="nombre"  placeholder="201603189" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre"  [disabled]="editable"  required  [(ngModel)]="newuser.carne">
+              </div>
+              
+            </div>
+            
+            <div class="form-row">
+              
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="inputPassword">Contraseña</label>
+                <input  name="password" type="password" class="form-control" id="inputPassword" placeholder="Contraseña" [disabled]="editable"  required [(ngModel)]="newuser.password">
+              </div>
+              
+            
+            </div>
+            
+            
+                
+                  
+                <div class="form-row">
+                    <div class="form-group col-md-6 col-sm-12">
+                        <button type="submit"  class="btn btn-success btn-lg btn-block" (click)="saveuser()" [disabled]="editable" >Iniciar sesion </button>
+                    </div>
+                </div>
+             
+          </form>
+        </div>
+      </div>
+      <div class="row"><br /><br /></div>
+      <footer style="text-align: center; margin-top: 30px; margin-bottom: 30px; font-style: italic;">
+        Guatemala, Guatemala 2020.
+        <br>
+        USAC - Facultad de Ingenieria
+        <br>
+        Usac Virtual Ingenieria
+    </footer>

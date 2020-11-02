@@ -2,12 +2,21 @@ import { Request, Response } from 'express';
 import pool from '../database';
 
 class AllController {
+    public async create(req: Request, res: Response): Promise<void> {
+        try {
+            const result = await pool.query('INSERT INTO users set ?', [req.body]);
+            res.json({ message: 'Usuario guardado Exitosamente' });    
+        } catch (error) {
+            res.json({ message: 'Hubo un errror al guardar el usuario' });    
+        }
+        
+    }
 
     public async list(req: Request, res: Response): Promise<void> {
         const games = await pool.query('SELECT * FROM users');
         res.json(games);
     }
-
+    
     public async getOne(req: Request, res: Response): Promise<any> {
         const { carne } = req.params;
         const users = await pool.query('SELECT * FROM users WHERE carne = ?', [carne]);
@@ -16,11 +25,6 @@ class AllController {
             return res.json(users[0]);
         }
         res.status(404).json({ text: "The student doesn't exits" });
-    }
-
-    public async create(req: Request, res: Response): Promise<void> {
-        const result = await pool.query('INSERT INTO games set ?', [req.body]);
-        res.json({ message: 'Game Saved' });
     }
 
     public async update(req: Request, res: Response): Promise<void> {
