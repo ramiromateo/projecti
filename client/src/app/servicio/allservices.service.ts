@@ -11,5 +11,8 @@ export class AllservicesService {
   public create(usernew){
     return this.http.post(`${this.url}/api/register`,usernew);
   }
+  public getone(carne){
+    return this.http.get(`${this.url}/api/${carne}`);
+  }
 
 }

@@ -24,7 +24,7 @@ class AllController {
         if (users.length > 0) {
             return res.json(users[0]);
         }
-        res.status(404).json({ text: "The student doesn't exits" });
+        res.json({ carne: -1 });
     }
 
     public async update(req: Request, res: Response): Promise<void> {

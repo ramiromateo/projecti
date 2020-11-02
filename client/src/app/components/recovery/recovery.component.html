@@ -11,7 +11,7 @@
     <div class="row"><br /><br /></div>
     <div class="col-md-5 offset-md-5 col-sm-12">
         <h1>
-            Iniciar sesion 
+            Crear nueva contraseña
         </h1>
     </div>
     <div class="row"><br /><br /></div>
@@ -21,7 +21,7 @@
             <div class="form-row">
             <div class="form-group col-md-6 col-sm-12">
                 <label for="inputNombre">Carne</label>
-                <input  name="nombre"  placeholder="201603189" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre"  [disabled]="editable"  required  [(ngModel)]="newuser.carne">
+                <input  name="nombre" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre" placeholder="202003189" [disabled]="editable"  required  [(ngModel)]="newuser.carne">
               </div>
               
             </div>
@@ -29,26 +29,23 @@
             <div class="form-row">
               
               <div class="form-group col-md-6 col-sm-12">
-                <label for="inputPassword">Contraseña</label>
-                <input  name="password" type="password" class="form-control" id="inputPassword" placeholder="Contraseña" [disabled]="editable"  required [(ngModel)]="newuser.password">
+                <label for="inputPassword">Correo electronico</label>
+                <input  name="password" type="text" class="form-control" id="inputPassword" placeholder="email"  [disabled]="editable"  required [(ngModel)]="newuser.password">
               </div>
               
             
             </div>
-            
-            
-                
                   
                 <div class="form-row">
                     <div class="form-group col-md-6 col-sm-12">
-                        <button type="submit"  class="btn btn-success btn-lg btn-block" (click)="saveuser()" [disabled]="editable" >Iniciar sesion </button>
+                        <button type="submit"  class="btn btn-success btn-lg btn-block" (click)="saveuser()" [disabled]="editable" >Crear Nueva Contraseña </button>
                     </div>
                     
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6 col-sm-12">
                 <div class="d-flex justify-content-center links">
-                  <a href="recovery">Forgot your password?</a>
+                  <a href="login">Iniciar sesion</a>
                 </div>
               </div>
             </div>

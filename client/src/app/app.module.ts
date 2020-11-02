@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
+import { RecoveryComponent } from './components/recovery/recovery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    RecoveryComponent
   ],
   imports: [
     BrowserModule,

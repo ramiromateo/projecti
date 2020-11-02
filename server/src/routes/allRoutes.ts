@@ -12,7 +12,7 @@ class AllRoutes {
     }
 
     config(): void {
-        //this.router.get('/:carne', allController.getOne);
+        this.router.get('/:carne', allController.getOne);
         this.router.post('/register', allController.create);
     }
 
