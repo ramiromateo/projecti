@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import pool from '../database';
 
-class LoginController {
+class AllController {
 
     public async list(req: Request, res: Response): Promise<void> {
         const games = await pool.query('SELECT * FROM users');
@@ -37,5 +37,5 @@ class LoginController {
     }
 }
 
-const loginController = new LoginController;
-export default loginController;
+const allController = new AllController;
+export default allController;

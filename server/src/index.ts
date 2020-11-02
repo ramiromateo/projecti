@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import loginRoutes from './routes/loginRoutes';
+import allRoutes from './routes/allRoutes';
 
 class Server {
 
@@ -23,7 +23,7 @@ class Server {
     }
 
     routes(): void {
-        this.app.use('/login', loginRoutes);
+        this.app.use('/login', allRoutes);
         //this.app.use('/api/games', gamesRoutes);
     }
 
