@@ -1,0 +1,75 @@
+<div class="row">
+    
+<nav class="col-md-12 navbar navbar-dark bg-dark justify-content-between">
+    <a class="navbar-brand">Consultoria para el nicio de cursos</a>
+    <form class="form-inline">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="calllogin()">Iniciar Sesion</button>
+    </form>
+  </nav>
+  
+</div>
+<div class="row"><br /><br /></div>
+<div class="col-md-8 offset-md-2 col-sm-12">
+    <h1>
+        Registro 
+    </h1>
+</div>
+<div class="row"><br /><br /></div>
+<div class="row">
+    <div class="col-md-8 offset-md-2 col-sm-12">
+      <form autocomplete="off">
+        <div class="form-row">
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="inputNombre">Carne</label>
+            <input  name="nombre" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre" placeholder="202003189" [disabled]="editable"  required  [(ngModel)]="newuser.carne">
+          </div>
+          
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6 col-sm-12">
+                <label for="inputNombre1">Nombres</label>
+                <input  name="nombre" type="text" class="form-control" id="inputNombre1" placeholder="Jose Francisco" [disabled]="editable"  required [(ngModel)]="newuser.names">
+              </div>
+              
+            </div>
+        <div class="form-row">
+                <div class="form-group col-md-6 col-sm-12">
+                  <label for="inputTelefono">Apellidos</label>
+                  <input  name="telefono"  type="text" class="form-control" id="inputTelefono" placeholder="Zacarias Gates" [disabled]="editable"  required [(ngModel)]="newuser.lastnames">
+                </div>
+                
+              </div>
+        <div class="form-row">
+          
+          <div class="form-group col-md-6 col-sm-12">
+            <label for="inputPassword">Contraseña</label>
+            <input  name="password" type="password" class="form-control" id="inputPassword" placeholder="**********" [disabled]="editable"  required [(ngModel)]="newuser.password">
+          </div>
+          
+        
+        </div>
+        
+        <div class="form-row">
+            
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="inputApellido">Correo</label>
+                <input  name="apellido" type="text" class="form-control" id="inputApellido" placeholder="Correo@mail.gt" required   [(ngModel)]="newuser.mail">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 col-sm-12">
+                    <button type="submit"  class="btn btn-success" (click)="saveuser()" [disabled]="editable" >Registrarme</button>
+                </div>
+            </div>
+         
+      </form>
+    </div>
+  </div>
+  <div class="row"><br /><br /></div>
+  <footer style="text-align: center; margin-top: 30px; margin-bottom: 30px; font-style: italic;">
+    Guatemala, Guatemala 2020.
+    <br>
+    USAC - Facultad de Ingenieria
+    <br>
+    Usac Virtual Ingenieria
+</footer>
