@@ -14,6 +14,7 @@ class AllRoutes {
     config(): void {
         this.router.get('/:carne', allController.getOne);
         this.router.post('/register', allController.create);
+        this.router.post('/update', allController.update);
     }
 
 }

@@ -23,6 +23,9 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (localStorage.getItem('usuarioActivo')) {
+      this.router.navigate(['inicio']);
+    }
   }
   saveuser(){
     if(this.newuser.carne!=0 && this.newuser.names!="" && this.newuser.lastnames!="" && this.newuser.password!="" && this.newuser.mail!=""){

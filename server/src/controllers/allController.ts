@@ -11,12 +11,6 @@ class AllController {
         }
         
     }
-
-    public async list(req: Request, res: Response): Promise<void> {
-        const games = await pool.query('SELECT * FROM users');
-        res.json(games);
-    }
-    
     public async getOne(req: Request, res: Response): Promise<any> {
         const { carne } = req.params;
         const users = await pool.query('SELECT * FROM users WHERE carne = ?', [carne]);
@@ -28,11 +22,19 @@ class AllController {
     }
 
     public async update(req: Request, res: Response): Promise<void> {
-        const { id } = req.params;
+        const { id ,newpass} = req.body;
         const oldGame = req.body;
-        await pool.query('UPDATE games set ? WHERE id = ?', [req.body, id]);
-        res.json({ message: "The game was Updated" });
+        await pool.query('update users set password=? where carne=?;', [newpass, id]);
+        res.json({ message: "Contraseña guardada correctamente" });
     }
+
+
+    public async list(req: Request, res: Response): Promise<void> {
+        const games = await pool.query('SELECT * FROM users');
+        res.json(games);
+    }
+
+   
 
     public async delete(req: Request, res: Response): Promise<void> {
         const { id } = req.params;
