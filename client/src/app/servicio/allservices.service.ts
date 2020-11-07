@@ -14,5 +14,8 @@ export class AllservicesService {
   public getone(carne){
     return this.http.get(`${this.url}/api/${carne}`);
   }
+  public updatepass(usernew){
+    return this.http.post(`${this.url}/api/update`,usernew);
+  }
 
 }

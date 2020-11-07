@@ -21,6 +21,9 @@ export class LoginComponent implements OnInit {
     mail:""
   }
   ngOnInit(): void {
+    if (localStorage.getItem('usuarioActivo')) {
+      this.router.navigate(['inicio']);
+    }
   }
   saveuser(){
     if(this.newuser.carne!=202000000 && this.newuser.password!="" ){
@@ -31,10 +34,11 @@ export class LoginComponent implements OnInit {
             alert("Usuario No existe")
           }
           else if(this.cont.password==this.newuser.password){
-            alert("Sesion iniciada")
+            localStorage.setItem('usuarioActivo', JSON.stringify(this.cont));
+            this.router.navigate(['inicio']);
           }
           else{alert("Contraseña incorrecta")}
-          //this.router.navigate(['login']);
+          
 
         },
         err => {}

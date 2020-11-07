@@ -7,13 +7,19 @@ import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RecoveryComponent } from './components/recovery/recovery.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { NavprincipalComponent } from './components/navprincipal/navprincipal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    RecoveryComponent
+    RecoveryComponent,
+    FooterComponent,
+    InicioComponent,
+    NavprincipalComponent
   ],
   imports: [
     BrowserModule,
