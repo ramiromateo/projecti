@@ -10,6 +10,7 @@ import { RecoveryComponent } from './components/recovery/recovery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavprincipalComponent } from './components/navprincipal/navprincipal.component';
+import { PublicacionComponent } from './components/publicacion/publicacion.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,11 @@ import { NavprincipalComponent } from './components/navprincipal/navprincipal.co
     RegisterComponent,
     LoginComponent,
     RecoveryComponent,
-    FooterComponent,
     InicioComponent,
-    NavprincipalComponent
+    FooterComponent,
+    NavprincipalComponent,
+    PublicacionComponent
+    
   ],
   imports: [
     BrowserModule,

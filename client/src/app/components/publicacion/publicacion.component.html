@@ -1,0 +1,40 @@
+<app-navprincipal></app-navprincipal>
+<div class="row"><br /><br /><br /><br /></div>
+<div class="container col-md-7">
+<div class="card " >
+    <div class="card-header">
+      Usuario: {{item.names+" "+item.lastnames}}
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title text-left" [hidden]="true">{{item.codepublication}} </h5>
+      <h5 class="card-title text-left" [hidden]="true">{{item.carne}} </h5>
+      <h5 class="card-title text-left" *ngIf="item.typepublication!=1">Curso: {{item.name}} </h5>
+      <h5 class="card-title text-left" *ngIf="item.typepublication!=2">Catedratico: {{item.namesp+" "+item.lastnamesp}}</h5>
+      <p class="card-text">Consulta: {{item.message}}</p>
+      
+      <a  class="btn btn-primary"> <i class="fas fa-address-card"></i>  Ver Perfil</a>
+      <a  class="btn btn-primary" (click)="mostrar()"> <i class="fas fa-comment-medical" ></i>  Dejar comentario</a>
+    </div>
+    <div class="card-footer text-muted text-right">
+      {{item.datepublication | date: 'dd-MM-yyyy'}}
+    </div>
+    
+</div>
+<div class="card"  *ngFor="let items of comentarios">
+    <div class="card-body">
+      <h5 class="card-title"><i class="fas fa-user"></i>  {{items.names+" "+items.lastnames}}</h5>
+      <p class="card-text">{{items.message}}</p>
+      
+      
+    </div>
+  </div>
+  <div class="card"[hidden]="bandera">
+    <div class="card-body">
+      <h5 class="card-title"><i class="fas fa-user"></i>  {{userlogeado.names+" "+userlogeado.lastnames}}</h5>
+      <textarea  maxlength="200" type="text" rows=3 class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="mensaje"></textarea>
+      <a  class="btn btn-success" (click)="comentar()"> <i class="fas fa-comment-medical"></i>  Comentar</a>
+    </div>
+  </div>
+</div>
+<div class="row"><br /><br /><br /><br /></div>
+<app-footer></app-footer>
