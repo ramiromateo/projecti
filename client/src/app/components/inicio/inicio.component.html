@@ -1,3 +1,142 @@
 <app-navprincipal></app-navprincipal>
-<div class="row"><br /><br /><br /><br /><br /><br /><br /></div>
+<div class="row"><br /><br /><br /><br /></div>
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+         <h1>Crear Nueva Publicacacion</h1> 
+        </div>
+        <div class="card-body text-center">
+          <div class="form-group text-center">
+            <a  class="btn  text-center {{colorcurso}}" (click)="forcurso()"> <i class="fas fa-book"></i>  Curso </a>
+            <a  class="btn {{colorprofesor}} text-center" (click)="forprofesor()"> <i class="fas fa-user-tie"></i>  Catedratico </a>
+            <a  class="btn {{colorcursoprofesor}} text-center" (click)="ambos()"> <i class="fas fa-chalkboard-teacher"></i> Curso Catedratico </a>
+          </div>
+ <div class="row">
+    <div class="col-md-6">
+        <h5 class="card-title text-left " [hidden]="mostrarcurso">Curso      <br />
+            <div class="container">
+            
+                <select name="selectorcuros" id="selectorcuros"  class="form-control btn-lg btn-block">
+                    <option *ngFor="let item of cursos" value={{item.codecourse}}>{{item.name}}</option>
+                </select>
+                <br />
+            </div>
+          </h5>
+         
+    </div>
+    <div class="col-md-6">
+      
+          <h5 class="card-title text-left" [hidden]="mostrarprofesor">Catedratico
+            <div class="container">
+            
+                <select name="selectorcatedratico" id="selectorcatedratico" (change)="getespecificcourse()" class="form-control btn-lg btn-block">
+                    <option *ngFor="let item of catedraticos" [(value)]="item.codeprofessor">{{item.names+" "+item.lastnames}}</option>
+                </select>
+                <br />
+            </div>
+          </h5>
+    </div>
+ </div>
+          
+            <div class="form-group text-left">
+              <label for="exampleInputEmail1">Consulta:</label>
+              <textarea  maxlength="200" type="text" rows=5 class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="newpublication.message"></textarea>
+              <small id="emailHelp" class="form-text text-muted">Ingrese lo que desea consultar.</small>
+            </div>
+          
+          
+          <a  class="btn btn-success text-left" (click)="guaradarpublicacion()"> <i class="fas fa-plus-square"></i>  Publicar </a>
+        </div>
+        
+      </div>
+
+
+
+
+      <div class="row"><br /><br /></div>
+      <hr/>
+      <div class="row"><br /><br /></div>
+
+      <div class="container">
+        <h2>
+          Filtrar Busqueda
+        </h2>
+        <div class="row">
+          <div class="col-md-9">
+        <div class="form-group text-left">
+          <a  class="btn  text-center {{colorcurso1}}" (click)="filcurso()"> <i class="fas fa-book"></i>  Curso </a>
+          <a  class="btn {{colorprofesor1}} text-center" (click)="filprofesor()"> <i class="fas fa-user-tie"></i>  Catedratico </a>
+          <a  class="btn  text-center {{colorcursoe}}" (click)="filcursoe()"> <i class="fas fa-book"></i>  Curso Especifico</a>
+          <a  class="btn {{colorprofesore}} text-center" (click)="filprofesore()"> <i class="fas fa-user-tie"></i>  Catedratico Especifico </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group text-right">
+          <a  class="btn  text-center btn-success" (click)="filtrar()"> <i class="fas fa-search"></i>  Buscar </a>
+        </div>
+      </div>
+    </div>
+<div class="row">
+  <div class="col-md-6">
+    
+      <h5 class="card-title text-left " [hidden]="mostrarcurso1">Curso      <br />
+          <div class="container">
+          
+              <select name="selectorcuros1" id="selectorcuros1"  class="form-control btn-lg btn-block">
+                  <option *ngFor="let item of cursos" value={{item.codecourse}}>{{item.name}}</option>
+              </select>
+              <br />
+          </div>
+        </h5>
+       
+  </div>
+  <div class="col-md-6">
+    
+        <h5 class="card-title text-left" [hidden]="mostrarprofesor1">Catedratico
+          <div class="container">
+          
+              <select name="selectorcatedratico1" id="selectorcatedratico1" class="form-control btn-lg btn-block">
+                  <option *ngFor="let item of catedraticos" [(value)]="item.codeprofessor">{{item.names+" "+item.lastnames}}</option>
+              </select>
+              <br />
+          </div>
+        </h5>
+  </div>
+</div>
+      </div>
+
+
+
+      <div class="row"><br /><br /></div>
+      <hr/>
+      <div class="row"><br /><br /></div>
+
+
+
+      
+<div *ngFor="let item of publicaciones">
+<div class="card" >
+    <div class="card-header">
+      Usuario: {{item.names+" "+item.lastnames}}
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title text-left" [hidden]="true">{{item.codepublication}} </h5>
+      <h5 class="card-title text-left" [hidden]="true">{{item.carne}} </h5>
+      <h5 class="card-title text-left" *ngIf="item.typepublication!=1">Curso: {{item.name}} </h5>
+      <h5 class="card-title text-left" *ngIf="item.typepublication!=2">Catedratico: {{item.namesp+" "+item.lastnamesp}}</h5>
+      <p class="card-text">Consulta: {{item.message}}</p>
+      <a  class="btn btn-primary" (click)="verpublicacion(item)"><i class="fas fa-comment-alt"></i>  Ver comentarios</a>
+      <a  class="btn btn-primary"> <i class="fas fa-address-card"></i>  Ver Perfil</a>
+      <a  class="btn btn-primary" (click)="verpublicacionv2(item)"> <i class="fas fa-comment-medical"></i>  Dejar comentario</a>
+    </div>
+    <div class="card-footer text-muted text-right">
+      {{item.datepublication | date: 'dd-MM-yyyy'}}
+    </div>
+    
+</div>
+<div class="row"><br /></div>
+</div>     
+</div>
+
+<div class="row"><br /><br /><br /><br /></div>
 <app-footer>    </app-footer>

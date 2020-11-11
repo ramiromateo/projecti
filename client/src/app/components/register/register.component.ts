@@ -44,8 +44,8 @@ export class RegisterComponent implements OnInit {
     }
   }
   editar(){}
+  
   calllogin(){
-    
     this.router.navigate(['login']);
   }
 
