@@ -1,0 +1,56 @@
+<app-navprincipal></app-navprincipal>
+<div class="row"><br /><br /><br /><br /></div>
+
+<div class="container col-md-6">
+    <div class="col-md-8 offset-md-2 col-sm-12">
+      <form autocomplete="off">
+        <div class="form-row">
+        <div class="form-group  col-sm-12">
+            <label for="inputNombre">Carne</label>
+            <input  name="inputNombre" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre" placeholder="202003189"  disabled required  [(ngModel)]="userlogeado.carne">
+          </div>
+          
+        </div>
+        <div class="form-row">
+            <div class="form-group  col-sm-12">
+                <label for="inputNombre1">Nombres</label>
+                <input  name="nombre" type="text" class="form-control" id="inputNombre1" placeholder="Jose Francisco"   required [(ngModel)]="userlogeado.names">
+              </div>
+              
+            </div>
+        <div class="form-row">
+                <div class="form-group  col-sm-12">
+                  <label for="inputTelefono">Apellidos</label>
+                  <input  name="telefono"  type="text" class="form-control" id="inputTelefono" placeholder="Zacarias Gates"   required [(ngModel)]="userlogeado.lastnames">
+                </div>
+                
+              </div>
+        <div class="form-row">
+          
+          <div class="form-group  col-sm-12">
+            <label for="inputPassword">Contraseña</label>
+            <input  name="password" type="password" class="form-control" id="inputPassword" placeholder="**********"   required [(ngModel)]="userlogeado.password">
+          </div>
+          
+        
+        </div>
+        
+        <div class="form-row">
+            
+              <div class="form-group  col-sm-12">
+                <label for="inputApellido">Correo</label>
+                <input  name="apellido" type="text" class="form-control" id="inputApellido" placeholder="Correo@mail.gt" required  disabled  [(ngModel)]="userlogeado.mail">
+              </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="form-group  col-sm-12">
+                  <a  class="btn btn-primary" routerLink="/perfil">   Cancelar</a>  
+                  <a  class="btn btn-primary"  (click)="saveuser()">  Guardar cambios</a>  
+                </div>
+            </div>
+         
+      </form>
+    </div>
+  </div>
+<div class="row"><br /><br /></div>
+<app-footer></app-footer>

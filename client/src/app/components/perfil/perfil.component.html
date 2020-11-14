@@ -1,0 +1,27 @@
+<app-navprincipal></app-navprincipal>
+<div class="row"><br /><br /><br /><br /></div>
+<div class="container">
+    <div class="card text-left">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre: {{userlogeado.names}}</h5>
+                    <h5 class="card-title">Apellidos: {{userlogeado.lastnames}}</h5>
+                    <h5 class="card-title">Correo: {{userlogeado.mail}}</h5>
+                  </div>
+            </div>
+            <div class="col-md-8 text-right">
+                <a  class="btn btn-primary text-center" (click)="gotoedi()" [hidden]="iam">Modificar Datos</a>
+                <a  class="btn btn-primary text-center" routerLink="/pensum">Ver Pensum</a>
+                <a  class="btn btn-primary text-center" routerLink="/cargar" [hidden]="iam">Cargar Cursos</a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Curso Aprobados:</h5>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="row"><br /><br /></div>
+<app-footer></app-footer>

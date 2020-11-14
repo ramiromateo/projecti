@@ -20,7 +20,9 @@ class AllRoutes {
         this.router.post('/registerpublication', allController.createpublication);
         this.router.post('/publicacion/filtrar', allController.filtrar);
         this.router.post('/addcomentary', allController.createcomentariy);
+        this.router.post('/updateuser', allController.updateuser);
         this.router.get('/publicacion/:id', allController.getonepublication);
+        this.router.get('/pensum/all/all', allController.getcourses);
         
         
     }

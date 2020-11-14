@@ -97,10 +97,25 @@ class AllController {
         }
     }
     
-    
+    public async updateuser(req: Request, res: Response): Promise<void> {
+
+        try {
+            await pool.query('update users set names=?,lastnames=?,password=? where carne=?', [req.body.names,req.body.lastnames,req.body.password, req.body.carne]);
+            res.json({ mensaje: "Usuario actualizado con exito" });  
+        } catch (error) {
+            console.log(error)
+            res.json({ mensaje: "error al actualizar " });  
+        }
+    }
 
    
+//select course.codecourse,course.name,pensum.credits from pensum inner join course on course.codecourse=pensum.course_codecourse
 
+    public async getcourses(req: Request, res: Response): Promise<void> {
+        const pensum=await pool.query('select course.codecourse,course.name,pensum.credits, pensum.semester from pensum inner join course on course.codecourse=pensum.course_codecourse');
+        res.json(pensum);  
+        
+    }
     public async delete(req: Request, res: Response): Promise<void> {
         const { id } = req.params;
         await pool.query('DELETE FROM games WHERE id = ?', [id]);

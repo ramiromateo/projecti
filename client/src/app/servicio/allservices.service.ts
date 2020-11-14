@@ -37,4 +37,12 @@ export class AllservicesService {
   public getonepublication(id){
     return this.http.get(`${this.url}/api/publicacion/${id}`);
   }
+  
+  public updateuser(user){
+    return this.http.post(`${this.url}/api/updateuser`,user);
+  }
+  
+  public getallcuourse(){
+    return this.http.get(`${this.url}/api/pensum/all/all`);
+  }
 }

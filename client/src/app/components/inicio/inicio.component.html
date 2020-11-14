@@ -126,7 +126,7 @@
       <h5 class="card-title text-left" *ngIf="item.typepublication!=2">Catedratico: {{item.namesp+" "+item.lastnamesp}}</h5>
       <p class="card-text">Consulta: {{item.message}}</p>
       <a  class="btn btn-primary" (click)="verpublicacion(item)"><i class="fas fa-comment-alt"></i>  Ver comentarios</a>
-      <a  class="btn btn-primary"> <i class="fas fa-address-card"></i>  Ver Perfil</a>
+      <a  class="btn btn-primary" (click)="verpefil(item.carne)"> <i class="fas fa-address-card"></i>  Ver Perfil</a>
       <a  class="btn btn-primary" (click)="verpublicacionv2(item)"> <i class="fas fa-comment-medical"></i>  Dejar comentario</a>
     </div>
     <div class="card-footer text-muted text-right">
