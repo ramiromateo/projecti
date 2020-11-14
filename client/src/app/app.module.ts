@@ -11,6 +11,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavprincipalComponent } from './components/navprincipal/navprincipal.component';
 import { PublicacionComponent } from './components/publicacion/publicacion.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { EditperfilComponent } from './components/editperfil/editperfil.component';
+import { PensumComponent } from './components/pensum/pensum.component';
+import { CargarComponent } from './components/cargar/cargar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { PublicacionComponent } from './components/publicacion/publicacion.compo
     InicioComponent,
     FooterComponent,
     NavprincipalComponent,
-    PublicacionComponent
+    PublicacionComponent,
+    PerfilComponent,
+    EditperfilComponent,
+    PensumComponent,
+    CargarComponent
     
   ],
   imports: [

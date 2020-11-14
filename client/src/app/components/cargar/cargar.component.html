@@ -1,0 +1,24 @@
+<app-navprincipal></app-navprincipal>
+<div class="row"><br /><br /><br /><br /></div>
+<div class="row"><br /><br /></div>
+<div class="row"><br /><br /></div><div class="row"><br /><br /></div><div class="row"><br /><br /></div><div class="row"><br /><br /></div><div class="row"><br /><br /></div>
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <select name="selectorcuros" id="selectorcuros"  class="form-control btn-lg btn-block">
+            <option *ngFor="let item of cursos" value={{item.codecourse}}>{{item.name}}</option>
+        </select>
+    </div>
+    <div class="col-md-1">
+        <label for="inputNombre">Nota</label>
+            <input  name="nombre" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre" placeholder="61"   required  [(ngModel)]="nota">
+    </div>
+    <div class="col-md-5 text-right">
+        <a  class="btn btn-primary text-center" >Cargar curso</a>
+    </div>
+</div>
+</div>
+<div class="row"><br /><br /></div>
+<div class="row"><br /><br /></div><div class="row"><br /><br /></div><div class="row"><br /><br /></div><div class="row"><br /><br /></div>
+<div class="row"><br /><br /></div><div class="row"><br /><br /></div>
+<app-footer></app-footer>

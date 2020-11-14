@@ -235,5 +235,9 @@ export class InicioComponent implements OnInit {
     this.verpublicacion(item)
     localStorage.setItem('mostrar', JSON.stringify(item));
   }
+  verpefil(num){
+    localStorage.setItem('perfilselect', JSON.stringify({carne:num}));
+    this.router.navigate(['perfil']);
+  }
 
 }

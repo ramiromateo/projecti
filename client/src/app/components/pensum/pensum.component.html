@@ -1,0 +1,185 @@
+<app-navprincipal></app-navprincipal>
+<div class="row"><br /><br /><br /><br /></div>
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th class="text-center" scope="col">1</th>
+            <th class="text-center" scope="col">2</th>
+            <th class="text-center" scope="col">3</th>
+            <th class="text-center" scope="col">4</th>
+            <th  class="text-center" scope="col">5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+                <div *ngFor="let item of items">
+                    <table class="table table-bordered" *ngIf="item.semester==1">
+                        <thead >
+                          <tr>
+                            <th class="text-center" scope="col">{{item.codecourse}}</th>
+                            <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                            <th class="text-center" scope="col">{{item.credits}}</th>
+                          </tr>
+                        </thead>
+                        
+                      </table>
+                </div>
+                  
+            </th>
+            <td>
+                <div *ngFor="let item of items">
+                    <table class="table table-bordered" *ngIf="item.semester==2">
+                        <thead >
+                          <tr>
+                            <th class="text-center" scope="col">{{item.codecourse}}</th>
+                            <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                            <th class="text-center" scope="col">{{item.credits}}</th>
+                          </tr>
+                        </thead>
+                        
+                      </table>
+                </div>
+            </td>
+            <td>
+                <div *ngFor="let item of items">
+                    <table class="table table-bordered" *ngIf="item.semester==3">
+                        <thead >
+                          <tr>
+                            <th class="text-center" scope="col">{{item.codecourse}}</th>
+                            <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                            <th class="text-center" scope="col">{{item.credits}}</th>
+                          </tr>
+                        </thead>
+                        
+                      </table>
+                </div>
+            </td>
+            <td>
+                <div *ngFor="let item of items">
+                    <table class="table table-bordered" *ngIf="item.semester==4">
+                        <thead >
+                          <tr>
+                            <th class="text-center" scope="col">{{item.codecourse}}</th>
+                            <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                            <th class="text-center" scope="col">{{item.credits}}</th>
+                          </tr>
+                        </thead>
+                        
+                      </table>
+                </div>
+            </td>
+            <td>  
+                <div *ngFor="let item of items">
+                    <table class="table table-bordered" *ngIf="item.semester==5">
+                        <thead >
+                          <tr>
+                            <th class="text-center" scope="col">{{item.codecourse}}</th>
+                            <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                            <th class="text-center" scope="col">{{item.credits}}</th>
+                          </tr>
+                        </thead>
+                        
+                      </table>
+                </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      
+      
+<div class="row"><br /><br /></div>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th class="text-center" scope="col">6</th>
+        <th class="text-center" scope="col">7</th>
+        <th class="text-center" scope="col">8</th>
+        <th class="text-center" scope="col">9</th>
+        <th  class="text-center" scope="col">10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+            <div *ngFor="let item of items">
+                <table class="table table-bordered" *ngIf="item.semester==6">
+                    <thead >
+                      <tr>
+                        <th class="text-center" scope="col">{{item.codecourse}}</th>
+                        <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                        <th class="text-center" scope="col">{{item.credits}}</th>
+                      </tr>
+                    </thead>
+                    
+                  </table>
+            </div>
+        </th>
+        <td>
+            <div *ngFor="let item of items">
+                <table class="table table-bordered" *ngIf="item.semester==7">
+                    <thead >
+                      <tr>
+                        <th class="text-center" scope="col">{{item.codecourse}}</th>
+                        <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                        <th class="text-center" scope="col">{{item.credits}}</th>
+                      </tr>
+                    </thead>
+                    
+                  </table>
+            </div>
+        </td>
+        <td>
+            <div *ngFor="let item of items">
+                <table class="table table-bordered" *ngIf="item.semester==8">
+                    <thead >
+                      <tr>
+                        <th class="text-center" scope="col">{{item.codecourse}}</th>
+                        <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                        <th class="text-center" scope="col">{{item.credits}}</th>
+                      </tr>
+                    </thead>
+                    
+                  </table>
+            </div>
+        </td>
+        <td>
+            <div *ngFor="let item of items">
+                <table class="table table-bordered" *ngIf="item.semester==9">
+                    <thead >
+                      <tr>
+                        <th class="text-center" scope="col">{{item.codecourse}}</th>
+                        <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                        <th class="text-center" scope="col">{{item.credits}}</th>
+                      </tr>
+                    </thead>
+                    
+                  </table>
+            </div>
+        </td>
+        <td>  <table class="table table-bordered">
+            <div *ngFor="let item of items">
+                <table class="table table-bordered" *ngIf="item.semester==10">
+                    <thead >
+                      <tr>
+                        <th class="text-center" scope="col">{{item.codecourse}}</th>
+                        <th class="text-center" scope="col"><small>{{item.name}}</small></th>
+                        <th class="text-center" scope="col">{{item.credits}}</th>
+                      </tr>
+                    </thead>
+                    
+                  </table>
+            </div>
+            
+          </table></td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+</div>
+<div class="row"><br /><br /></div>
+<app-footer></app-footer>
