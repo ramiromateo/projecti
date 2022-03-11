@@ -2,7 +2,7 @@
     
     <nav class="col-md-12 navbar navbar-dark bg-dark justify-content-between">
       <div class="container">
-        <a class="navbar-brand" class="text-white">Consultoria para el nicio de cursos</a>
+        <a class="navbar-brand" class="text-white">FAUNADEX Sube las fotos de tus animalitos favoritos</a>
         <form class="form-inline">
           <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="callregister()">Registrarme</button>
         </form>
@@ -23,7 +23,7 @@
             <div class="form-row">
             <div class="form-group col-md-6 col-sm-12">
                 <label for="inputNombre">Carne</label>
-                <input  name="nombre"  placeholder="201603189" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" class="form-control" id="inputNombre"  [disabled]="editable"  required  [(ngModel)]="newuser.carne">
+                <input  name="nombre"  placeholder="Myuser"  type="text" class="form-control" id="inputNombre"  [disabled]="editable"  required  [(ngModel)]="newuser.carne">
               </div>
               
             </div>
@@ -32,7 +32,7 @@
               
               <div class="form-group col-md-6 col-sm-12">
                 <label for="inputPassword">Contraseña</label>
-                <input  name="password" type="password" class="form-control" id="inputPassword" placeholder="Contraseña" [disabled]="editable"  required [(ngModel)]="newuser.password">
+                <input  name="password" type="password" class="form-control" id="inputPassword" placeholder="Contraseña" [disabled]="editable"  required [(ngModel)]="newuser.contrasenia">
               </div>
               
             

@@ -14,30 +14,31 @@ export class LoginComponent implements OnInit {
   cont:any
   tipouser="Administrador"
   newuser={
-    carne:202000000,
+    carne:"",
     names:"",
     lastnames:"",
-    password:"",
+    contrasenia:"",
     mail:""
   }
+  
   ngOnInit(): void {
     if (localStorage.getItem('usuarioActivo')) {
       this.router.navigate(['inicio']);
     }
   }
   saveuser(){
-    if(this.newuser.carne!=202000000 && this.newuser.password!="" ){
-      this.allservicesService.getone(this.newuser.carne).subscribe(
+    if(this.newuser.carne!=="" && this.newuser.contrasenia!="" ){
+      this.allservicesService.login(this.newuser).subscribe(
         res => {
           this.cont=res
-          if(this.cont.carne==-1){
-            alert("Usuario No existe")
+          if(this.cont.id_user==-1){
+            alert("Usuario y/o contraseña incorrectas")
           }
-          else if(this.cont.password==this.newuser.password){
+          /*else if(this.cont.password==this.newuser.contrasenia){
             localStorage.setItem('usuarioActivo', JSON.stringify(this.cont));
             this.router.navigate(['inicio']);
-          }
-          else{alert("Contraseña incorrecta")}
+          }*/
+          else{alert("Gologin")}
           
 
         },

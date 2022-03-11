@@ -1,0 +1,6 @@
+{ 
+    "/login": {
+        "target": "http://3.142.189.238:4200",
+        "secure": false
+    }
+}
